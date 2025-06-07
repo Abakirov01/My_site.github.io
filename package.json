@@ -1,0 +1,16 @@
+{
+  "name": "tehmag-project",
+  "version": "1.0.0",
+  "description": "Магазин бытовой техники - сайт с отзывами и каталогом",
+  "main": "main.js",
+  "scripts": {
+    "start": "live-server public",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
