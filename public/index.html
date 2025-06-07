@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Магазин электронной техники</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <img class="logo" src="./img/icons/free-icon-font-shopping-cart.png" alt="Логотип магазина" />
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="list">
+          <li><a href="#why">Почему мы</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#reviews-photo">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a href="#">Главная</a>
+        </div>
+        <div class="navbar-right">
+          <!-- Иконка пользователя (можно заменить на img) -->
+          <img src="img/icon-cont/user-avatar.png" alt="user" id="userIcon" class="user-icon">
+        </div>
+      </nav>
+    </div>
+    
+      <!-- Модальное окно -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Вход / Регистрация</h2>
+          <form id="authForm">
+            <label for="username">Email или логин:</label>
+            <input type="text" id="username" name="username" placeholder="Введите Email или логин">
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль">
+            
+            <button type="submit" class="modal-btn">Войти</button>
+           </form>
+           <button type="button" id="googleLogin" class="modal-btn">Войти через Google</button>
+          </div>
+    </div>
+  
+  </header>
+  
+  <main>
+    <section class="title" id="title">
+      <div class="container">
+        <div class="title-1">
+          <h1>Товары от 590 руб. с доставкой</h1>
+          <p>Добро пожаловать на сайт нашей компании. Мы занимаемся продажей и доставкой электронной техники. Оставьте заявку и мы с вами свяжемся.</p>
+          <a class="btn" href="#catalog">Перейти в каталог</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="special">
+      <div class="container">
+          <h2>Специальные предложения</h2>
+          <div id="carousel">
+              <img src="./img/carosel/carosel.jpg" class="active">
+              <img src="./img/carosel/carosel2.jpg" class="img-carosel-2">
+              <div class="special-content" style="position: absolute; top: 0; left: 0; z-index: 1;">
+                  <p class="p-size">Только до конца месяца – бесплатная доставка</p>
+                  <p>При покупке бытовой техники фирмы BOSH на сумму от 5 000 рублей наши специалисты осуществят
+                      бесплатную доставку и установку</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>Какую технику мы предлагаем</h2>
+        <div class="services-row">
+          <div class="services-card">
+            <img src="./img/icons/free-icon-font-home-17594011.png" alt="Техника для дома" class="services-img" />
+            <a href="#" class="services-a">Технику для дома</a>
+          </div>
+          <div class="services-card">
+            <img src="./img/icons/free-icon-font-computer-16106537.png" alt="Мелкая бытовая техника" class="services-img" />
+            <a href="#" class="services-a">Компьютеры и ноутбуки</a>
+          </div>
+          <div class="services-card">
+            <img src="./img/icons/free-icon-font-mobile-notch-8034751.png" alt="Для ухода за одеждой" class="services-img" />
+            <a href="#" class="services-a">Смартфоны и планшеты</a>
+          </div>
+          <div class="services-card">
+            <img src="./img/icons/free-icon-font-headset-16850067.png" alt="Кухонная техника" class="services-img" />
+            <a href="#" class="services-a">Аксессуары</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="promo" id="promo">
+     <div class="container promo-content">
+    <div class="promo-text">
+      <h2>Большая летняя распродажа!</h2>
+      <p>Только до <span id="promo-end-date">31 июля 2025</span> скидки до 25% на всю технику</p>
+      <div class="promo-timer">
+        <div><span id="days">00</span><small>дн</small></div>
+        <div><span id="hours">00</span><small>ч</small></div>
+        <div><span id="minutes">00</span><small>мин</small></div>
+        <div><span id="seconds">00</span><small>с</small></div>
+      </div>
+      <a href="#catalog" class="btn promo-btn">Успей купить</a>
+    </div>
+    <div class="promo-image">
+      <img src="./img/promo/discount.webp" alt="Летняя распродажа">
+    </div>
+     </div>
+    </section>
+
+    <section class="tovars">
+      <div class="container">
+        <h2 class="tovars-h3">Популярные товары</h2>
+        <div class="tovars-row">
+          
+          <div class="tovars-r">
+            <img src="./img/tovars/tovar1.jpg" alt="Стиральная машина LG FH2C3" class="tovars-img" />
+            <a href="#">Стиральная машина LG FH2C3</a>
+            <p>Функция мобильной диагностики SmartDiagnosis позволяет сократить время и сэкономить деньги в случае неполадок.</p>
+            <h4>15 490 руб.</h4>
+            <a href="#" class="btn-tovar">Заказать</a>
+          </div>
+          <div class="tovars-r">
+            <img src="./img/tovars/tovar2.jpg" alt="Телевизор Samsung UE19H40" class="tovars-img" />
+            <a href="#">Телевизор Samsung UE19H40</a>
+            <p>Функция телетекста позволит ознакомиться с прогнозом погоды или новостями, не отрываясь от телепередачи.</p>
+            <h4>20 990 руб.</h4>
+            <a href="#" class="btn-tovar">Заказать</a>
+          </div>
+          <div class="tovars-r" class="tovar-center">
+            <img src="./img/tovars/tovar3.jpg" alt="Холодильник LG GA-B409" class="tovars-img" />
+            <a href="#">Холодильник LG GA-B409</a>
+            <p>Индикатор температуры и внешний дисплей делают модель удобной в использовании. Блокировка управления – для безопасности.</p>
+            <h4>25 490 руб.</h4>
+            <a href="#" class="btn-tovar">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us" id="why">
+      <div class="container">
+        <h2 class="why-h5">Почему выбирают именно нас</h2>
+        <div class="why-row">
+          <div class="why-r">
+            <img src="./img/why-img/free-icon-money-icons-399545.png" alt="Доступная стоимость" />
+            <h3>Доступная стоимость</h3>
+            <p>В нашем магазине вы можете заказать любую технику по выгодным ценам.</p>
+          </div>
+          <div class="why-r">
+            <img src="./img/why-img/free-icon-truck-3097148.png" alt="Быстрая доставка" />
+            <h3>Быстрая доставка</h3>
+            <p>Мы сотрудничаем с сервисами доставки, поэтому заказы приходят за 1–2 дня.</p>
+          </div>
+          <div class="why-r">
+            <img src="./img/why-img/free-icon-sale-7164479.png" alt="Скидки и акции" />
+            <h3>Скидки и акции</h3>
+            <p>Каждый месяц мы проводим акции и специальные предложения.</p>
+          </div>
+          <div class="why-r">
+            <img src="./img/why-img/free-icon-operator-3302466.png" alt="Помощь специалиста" />
+            <h3>Помощь специалиста</h3>
+            <p>Наши специалисты помогут выбрать подходящую технику.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <h2 class="catalog-h4">Каталог наших товаров</h2>
+        <div class="catalog-row">
+    
+          <div class="catalog-r">
+            <img src="./img/catalog-img/mobile.png" alt="Iphone 16" class="catalog-img" />
+            <h3 class="catalog-t">Iphone 16</h3>
+            <p class="catalog-p">Механические приборы, которые выполняют бытовые функции, такие как приготовление пищи или чистка.</p>
+            <p class="catalog-h6"> 84 000 сом</p>
+            <a href="#" class="catalog-btn">Заказать</a>
+          </div>
+    
+          <div class="catalog-r">
+            <img src="./img/catalog-img/computer.png" alt="Корпус Predator Orion 9000" class="catalog-img" />
+            <h3 class="catalog-t">Корпус Predator Orion 9000</h3>
+            <p class="catalog-p">Механические приборы, которые выполняют бытовые функции, такие как приготовление пищи или чистка.</p>
+            <p class="catalog-h6">174 800 сом</p>
+            <a href="#" class="catalog-btn">Заказать</a>
+          </div>
+    
+          <div class="catalog-r">
+            <img src="./img/catalog-img/cat3.jpg" alt="Холодильник 589932" class="catalog-img" />
+            <h3 class="catalog-t">Холодильник 589932</h3>
+            <p class="catalog-p">Механические приборы, которые выполняют бытовые функции, такие как приготовление пищи или чистка.</p>
+            <p class="catalog-h6">30 490 сом</p>
+            <a href="#" class="catalog-btn">Заказать</a>
+          </div>
+    
+          <div class="catalog-r">
+            <img src="./img/catalog-img/cat4.jpg" alt="Телевизор 705039" class="catalog-img" />
+            <h3 class="catalog-t">Телевизор 705039</h3>
+            <p class="catalog-p">Механические приборы, которые выполняют бытовые функции, такие как приготовление пищи или чистка.</p>
+            <p class="catalog-h6">27 500 сом</p>
+            <a href="#" class="catalog-btn">Заказать</a>
+          </div>
+    
+          <div class="catalog-r">
+            <img src="./img/catalog-img/cat5.jpg" alt="Стиральная машина 963252" class="catalog-img" />
+            <h3 class="catalog-t">Стиральная машина 963252</h3>
+            <p class="catalog-p">Механические приборы, которые выполняют бытовые функции, такие как приготовление пищи или чистка.</p>
+            <p class="catalog-h6">29 990 сом</p>
+            <a href="#" class="catalog-btn">Заказать</a>
+          </div>
+    
+          <div class="catalog-r">
+            <img src="./img/catalog-img/accessories.png" alt="Беспроводные наушники Realme Buds Air 5 PRO" class="catalog-img" />
+            <h3 class="catalog-t">Беспроводные наушники Realme Buds Air 5 PRO</h3>
+            <p class="catalog-p">Механические приборы, которые выполняют бытовые функции, такие как приготовление пищи или чистка.</p>
+            <p class="catalog-h6">5 199 сом</p>
+            <a href="#" class="catalog-btn">Заказать</a>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="brends">
+      <div class="container">
+        <h2 class="why-h5">Бренды, представленные в магазине</h2>
+        <div class="brends-img">
+          <img src="./img/brends.png" alt="Логотипы представленных брендов" />
+        </div>
+      </div>
+    </section>
+
+  <section class="reviews-photo" id="reviews-photo">
+  <div class="container">
+    <h2>Отзывы от наших клиентов</h2>
+    <div class="reviews-grid">
+      <button id="open-review-btn" class="btn">Оставить отзыв</button>
+    </div>
+  </div>
+</section>
+  <div id="cart-float">
+    <img src="img/icons/free-animated.gif" alt="Корзина">
+    <span id="cart-count">0</span>
+</div>
+  </main>
+  </main>
+
+  <!-- Модальное окно отзыва -->
+  <div id="review-modal" class="modal-container">
+  <div class="modal-content">
+    <span id="close-modal" class="close-btn">&times;</span>
+    <h2>Оставить отзыв</h2>
+    <form id="review-form">
+      <input type="text" name="name" placeholder="Имя" required>
+      <select name="category" required>
+        <option value="">Категория</option>
+        <option value="tv">Телевизоры</option>
+        <option value="fridge">Холодильники</option>
+        <option value="washer">Стиральные машины</option>
+        <option value="accessories">Аксессуары</option>
+        <option value="smartphones">Смартфоны</option>
+        <option value="computers">Компьютеры</option>
+        <option value="other">Другое</option>
+      </select>
+      <input type="number" name="rating" min="1" max="5" placeholder="Оценка (1–5)" required>
+      <textarea name="comment" placeholder="Текст отзыва" required></textarea>
+      <button type="submit" class="btn">Отправить</button>
+    </form>
+  </div>
+  </div>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>Контакты</h3>
+        <p>Телефон: <a href="tel:+78003332233">+996 707 012 077</a></p>
+        <p>Email: <a href="mailto:info@tehmag.ru">bulanabakirov19@gmail.com</a></p>
+        <p>Адрес: г. Бишкек, ул. Техническая, 15</p>
+      </div>
+      <div class="footer-social">
+        <h3>Мы в соцсетях</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank"><img src="./img/icon-cont/icon-instagram.png" alt="Instagram"></a>
+          <a href="https://web.telegram.org/" target="_blank"><img src="./img/icon-cont/icon-telegram.png" alt="Telegram"></a>
+          <a href="https://www.whatsapp.com/?lang=ru_RU" target="_blank"><img src="./img/icon-cont/icon-whatsapp.png" alt="WhatsApp"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Магазин электронных товаров. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  
+</body>
+
+</html>

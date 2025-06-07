@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог товаров</title>
+
+  <link rel="stylesheet" href="catalog.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li> 
+        </ul>
+    <div class="navbar-right">
+       <img src="img/icon-cont/user-avatar.png" alt="user" id="userIcon" class="user-icon">
+        </div>
+      </nav>
+    </div>
+
+      <!-- Модальное окно -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Вход / Регистрация</h2>
+          <form id="authForm">
+            <label for="username">Email или логин:</label>
+            <input type="text" id="username" name="username" placeholder="Введите Email или логин">
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль">
+            
+            <button type="submit" class="modal-btn">Войти</button>
+           </form>
+           <button type="button" id="googleLogin" class="modal-btn">Войти через Google</button>
+          </div>
+    </div>
+  
+  </header>
+
+
+  <main class="catalog-container">
+  <!-- Фильтры -->
+  <section class="filter-section">
+    <div class="filter-sidebar">
+      <h2>Фильтры</h2>
+      <div class="price-filter">
+        <label>От <input type="number" id="min-price" placeholder="0"></label>
+        <label>До <input type="number" id="max-price" placeholder="200000"></label>
+      </div>
+      <div class="category-filter">
+        <h3>Категории</h3>
+        <label><input type="checkbox" class="category-checkbox" value="Смартфоны"> Смартфоны</label>
+        <label><input type="checkbox" class="category-checkbox" value="Компьютеры"> Компьютеры</label>
+        <label><input type="checkbox" class="category-checkbox" value="Холодильники"> Холодильники</label>
+        <label><input type="checkbox" class="category-checkbox" value="Телевизоры"> Телевизоры</label>
+        <label><input type="checkbox" class="category-checkbox" value="Аксессуары"> Аксессуары</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-grid">
+  <div class="product-card" data-category="Смартфоны" data-price="84000">
+    <img src="img/catalog-img/mobile.png" alt="Iphone 16">
+    <h3>Iphone 16</h3>
+    <p>Смартфон нового поколения с мощным процессором.</p>
+    <div class="product-price">84 000 сом</div>
+    <button class="add-to-cart">Добавить в корзину</button>
+  </div>
+  <div class="product-card" data-category="Компьютеры" data-price="174800">
+    <img src="img/catalog-img/computer.png" alt="Predator Orion 9000">
+    <h3>Predator Orion 9000</h3>
+    <p>Мощный игровой компьютер для любых задач.</p>
+    <div class="product-price">174 800 сом</div>
+    <button class="add-to-cart">Добавить в корзину</button>
+  </div>
+  <div class="product-card" data-category="Холодильники" data-price="30490">
+    <img src="img/catalog-img/cat3.jpg" alt="Холодильник 589932">
+    <h3>Холодильник 589932</h3>
+    <p>Современный холодильник с большой камерой.</p>
+    <div class="product-price">30 490 сом</div>
+    <button class="add-to-cart">Добавить в корзину</button>
+  </div>
+  <div class="product-card" data-category="Телевизоры" data-price="27500">
+    <img src="img/catalog-img/cat4.jpg" alt="Телевизор 705033">
+    <h3>Телевизор 705033</h3>
+    <p>Яркий 4K телевизор для всей семьи.</p>
+    <div class="product-price">27 500 сом</div>
+    <button class="add-to-cart">Добавить в корзину</button>
+  </div>
+  <!-- Добавляй новые карточки по аналогии, с нужной категорией и ценой -->
+</section>
+
+<div id="cart-float">
+    <img src="img/icons/free-animated.gif" alt="Корзина">
+    <span id="cart-count">0</span>
+</div>
+</main>
+
+
+
+
+  <footer class="footer" id="contacts">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>Контакты</h3>
+        <p>Телефон: <a href="tel:+78003332233">+996 707 012 077</a></p>
+        <p>Email: <a href="mailto:info@tehmag.ru">bulanabakirov19@gmail.com</a></p>
+        <p>Адрес: г. Бишкек, ул. Техническая, 15</p>
+      </div>
+      <div class="footer-social">
+        <h3>Мы в соцсетях</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank"><img src="./img/icon-cont/icon-instagram.png" alt="Instagram"></a>
+          <a href="https://web.telegram.org/" target="_blank"><img src="./img/icon-cont/icon-telegram.png" alt="Telegram"></a>
+          <a href="https://www.whatsapp.com/?lang=ru_RU" target="_blank"><img src="./img/icon-cont/icon-whatsapp.png" alt="WhatsApp"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Магазин электронных товаров. Все права защищены.</p>
+    </div>
+  </footer>
+  
+  <script src="main.js"></script>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
+});
+
+// Чтобы меню закрывалось при клике по пункту (на мобиле)
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  });
+});
+</script>
+  
+</body>
+</html>
